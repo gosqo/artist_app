@@ -47,7 +47,6 @@ function App() {
       
       {artistsILike.map(dish => <Artist name={dish.name} picture={dish.image} born={dish.born} />)}
       
-
     </div>
   );
 }
