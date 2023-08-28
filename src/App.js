@@ -1,11 +1,11 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-function artist({name, picture, born}) {
+function Artists({name, picture, born}) {
   return (
   <div>
     <h3>I love {name}</h3>
-    <h2>born in {born}</h2>
+    <h4>born in {born}</h4>
     <img src={picture} alt={name} width="300px"/>
   </div>
   );
@@ -34,17 +34,17 @@ const artistsILike = [
   }
 ];
 
-function renderFood(dish) {
-  return <Food name={dish.name} picture={dish.image} />;
+function renderArtists(dish) {
+  return <Artists name={dish.name} picture={dish.image} born={dish.born} />;
 }
 // const renderFood = dish => <Food name={dish.name} picture={dish.image} />;
 
 function App() {
-  console.log(artistsILike.map(renderFood));
+  console.log(artistsILike.map(renderArtists));
   return (
     <div>
       
-      {artistsILike.map(dish => <artist name={dish.name} picture={dish.image} born={dish.born} />)}
+      {artistsILike.map(dish => <Artists name={dish.name} picture={dish.image} born={dish.born} />)}
       
 
     </div>
