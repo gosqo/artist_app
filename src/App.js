@@ -1,9 +1,10 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-function Artists({name, picture, born}) {
+function Artist({name, picture, born}) {
   return (
   <div>
+    <hr />
     <h3>I love {name}</h3>
     <h4>born in {born}</h4>
     <img src={picture} alt={name} width="300px"/>
@@ -35,7 +36,7 @@ const artistsILike = [
 ];
 
 function renderArtists(dish) {
-  return <Artists name={dish.name} picture={dish.image} born={dish.born} />;
+  return <Artist name={dish.name} picture={dish.image} born={dish.born} />;
 }
 // const renderFood = dish => <Food name={dish.name} picture={dish.image} />;
 
@@ -44,7 +45,7 @@ function App() {
   return (
     <div>
       
-      {artistsILike.map(dish => <Artists name={dish.name} picture={dish.image} born={dish.born} />)}
+      {artistsILike.map(dish => <Artist name={dish.name} picture={dish.image} born={dish.born} />)}
       
 
     </div>
